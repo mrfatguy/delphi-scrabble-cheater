@@ -101,7 +101,7 @@ begin
         cbMode.ItemIndex:=0;
         if cbLang.Items.Count<=0 then
         begin
-                Application.MessageBox('Nie odnaleziono ¿adnego pliku s³ownika (wymagane s¹ pliki o rozszerzeniu *.dic). '+chr(13)+'Zainstaluj ponownie program lub pobierz jego najnowsz¹ wersjê z serwisu http://www.trejderowski.com/...'+chr(13)+''+chr(13)+'Program nie mo¿e dzia³aæ prawid³owo bez s³owników i zostanie zamkniêty...','B³¹d!',MB_OK+MB_ICONERROR+MB_DEFBUTTON1);
+                Application.MessageBox('There are no *.dic files in folder, from where this application was run. This program requires at least one dictionary file to work!','Error!',MB_OK+MB_ICONERROR+MB_DEFBUTTON1);
                 Application.Terminate;
                 exit;
         end;
@@ -127,8 +127,8 @@ Screen.Cursor:=crHourglass;
 fil:=cbLang.Items.Strings[cbLang.ItemIndex];
 Start := GetTickCount;
 Words.LoadFromFile(fil);
-msg:='Otwarto plik s³ownika: '+fil+#10#13+'Odczytana iloœæ wyrazów: '+IntToStr(Words.Count)+#10#13+'Czas trwania operacji: '+IntToStr(GetTickCount-Start)+ ' ms.';
-Application.MessageBox(PChar(msg),'Otwarto s³ownik...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
+msg:='Dictionary file opened: '+fil+#10#13+'Number of words: '+IntToStr(Words.Count)+#10#13+'Operation time: '+IntToStr(GetTickCount-Start)+ ' ms.';
+Application.MessageBox(PChar(msg),'Dictionary...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
 Screen.Cursor:=crDefault;
 end;
 
@@ -145,12 +145,12 @@ for a:=0 to cbLetters.Items.Count-1 do if cbLetters.Checked[a] then sSelected:=s
 for a:=0 to cbLetters.Items.Count-1 do if not cbLetters.Checked[a] then sUnselected:=sUnselected+Copy(Letters,a+1,1);
 if sSelected='' then
 begin
-        Application.MessageBox('Wybierz przynajmniej jedn¹ literê.','Informacja...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
+        Application.MessageBox('Select at least one letter.','Information...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
         exit;
 end;
 if sSelected=Letters then
 begin
-        Application.MessageBox('Przeszukiwanie s³ownika nie ma sensu, gdy zaznaczysz wszystkie litery, gdy¿ w rezultacie uzyskasz ca³¹ zawartoœæ danego s³ownika.','Informacja...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
+        Application.MessageBox('You have selected all letters. Searching the dictionary is pointless','Information...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
         exit;
 end;
 
@@ -261,7 +261,7 @@ begin
 Screen.Cursor:=crHourglass;
 FoundForm.list.Clear;
 FoundForm.list.Items:=Found;
-FoundForm.Caption:='Znalezione wyrazy';
+FoundForm.Caption:='Found words';
 FoundForm.Label1.Caption:='';
 FoundForm.ShowModal;
 end;
@@ -273,7 +273,7 @@ Memo1.Clear;
 Memo1.Lines:=Found;
 Memo1.SelectAll;
 Memo1.CopyToClipboard;
-Application.MessageBox(PChar('Liczba linii tekstu skopiowanych do Schowka: '+IntToStr(Memo1.Lines.Count)),'Informacja...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
+Application.MessageBox(PChar('Number of lines copied to clipboard: '+IntToStr(Memo1.Lines.Count)),'Information...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
 Screen.Cursor:=crDefault;
 end;
 
@@ -285,7 +285,7 @@ begin
         ListBox1.Clear;
         ListBox1.Items:=Found;
         ListBox1.Items.SaveToFile(SaveDialog1.FileName);
-        Application.MessageBox(PChar('Liczba linii tekstu zapisanych do pliku '+SaveDialog1.FileName+': '+IntToStr(Memo1.Lines.Count)),'Informacja...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
+        Application.MessageBox(PChar('Number of lines saved to '+SaveDialog1.FileName+' file: '+IntToStr(Memo1.Lines.Count)),'Information...',MB_OK+MB_ICONINFORMATION+MB_DEFBUTTON1);
         Screen.Cursor:=crDefault;
 end;
 end;
@@ -295,7 +295,7 @@ begin
 Screen.Cursor:=crHourglass;
 FoundForm.list.Clear;
 FoundForm.list.Items.LoadFromFile(cbLang.Text);
-FoundForm.Caption:='Edycja s³ownika';
+FoundForm.Caption:='Edit dictionary';
 FoundForm.Label1.Caption:=cbLang.Text;
 FoundForm.ShowModal;
 end;

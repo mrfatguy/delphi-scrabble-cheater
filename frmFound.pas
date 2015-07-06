@@ -49,7 +49,7 @@ procedure TFoundForm.Button1Click(Sender: TObject);
 var
         add: String;
 begin
-add:=InputBox('Dodaj...','Wpisz wyraz, który chcesz dodaæ:','');
+add:=InputBox('Add...','Add new word:','');
 if add<>'' then list.Items.Add(add);
 end;
 
@@ -64,7 +64,7 @@ var
         add: String;
 begin
 if list.ItemIndex=-1 then exit;
-add:=InputBox('Zmieñ...','Zmieñ wybrany wyraz:',list.Items.Strings[list.ItemIndex]);
+add:=InputBox('Change...','Change selected word:',list.Items.Strings[list.ItemIndex]);
 list.Items.Strings[list.ItemIndex]:=add;
 end;
 

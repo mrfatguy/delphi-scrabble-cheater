@@ -2,7 +2,7 @@ object Info: TInfo
   Left = 191
   Top = 79
   BorderStyle = bsNone
-  Caption = 'O programie...'
+  Caption = 'About...'
   ClientHeight = 194
   ClientWidth = 515
   Color = clBtnFace
@@ -35,9 +35,7 @@ object Info: TInfo
       Width = 491
       Height = 13
       Alignment = taCenter
-      Caption = 
-        'Copyright '#169' 2001- 2003 by trejderowski.com. Wszelkie prawa zastr' +
-        'ze'#380'one!'
+      Caption = 'Copyright '#169' 2001-2003 by Tomasz Trejderowski'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -52,7 +50,7 @@ object Info: TInfo
       Width = 384
       Height = 13
       Alignment = taCenter
-      Caption = 'Ten program jest rozpowszechniany na zasadach licencji freeware.'
+      Caption = 'This program is licensed under MIT License.'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clBlack
       Font.Height = -11
@@ -67,9 +65,7 @@ object Info: TInfo
       Width = 445
       Height = 59
       Cursor = crHandPoint
-      Hint = 
-        'trejderowski.com#Kliknij, aby odwiedzi'#263' nasz'#261' stron'#281' internetow'#261 +
-        '...'
+      Hint = 'Click to visit my webpage'
       AutoSize = True
       ParentShowHint = False
       Picture.Data = {

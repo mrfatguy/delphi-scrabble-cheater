@@ -3,7 +3,7 @@ object FoundForm: TFoundForm
   Top = 107
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'Znalezione wyrazy'
+  Caption = 'Found words'
   ClientHeight = 285
   ClientWidth = 315
   Color = clBtnFace
@@ -39,7 +39,7 @@ object FoundForm: TFoundForm
     Top = 4
     Width = 140
     Height = 25
-    Caption = 'Dodaj nowy wyraz'
+    Caption = 'Add new word'
     TabOrder = 1
     OnClick = Button1Click
   end
@@ -48,7 +48,7 @@ object FoundForm: TFoundForm
     Top = 32
     Width = 140
     Height = 25
-    Caption = 'Usuñ zaznaczony wyraz'
+    Caption = 'Delete selected word'
     TabOrder = 2
     OnClick = Button2Click
   end
@@ -57,7 +57,7 @@ object FoundForm: TFoundForm
     Top = 60
     Width = 140
     Height = 25
-    Caption = 'Edytuj zaznaczony wyraz'
+    Caption = 'Edit selected word'
     TabOrder = 3
     OnClick = Button3Click
   end
@@ -66,7 +66,7 @@ object FoundForm: TFoundForm
     Top = 256
     Width = 140
     Height = 25
-    Caption = 'Zamknij to okno'
+    Caption = 'Close this window'
     TabOrder = 4
     OnClick = Button4Click
   end

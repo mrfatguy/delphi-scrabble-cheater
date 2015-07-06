@@ -32,7 +32,7 @@ implementation
 
 procedure TInfo.GoToURL(Sender: TObject);
 begin
-        ShellExecute(Handle,'open','http://www.trejderowski.com/','','',SW_SHOW);
+        ShellExecute(Handle,'open','http://www.gaman.pl/','','',SW_SHOW);
 end;
 
 procedure TInfo.CloseWindow(Sender: TObject);

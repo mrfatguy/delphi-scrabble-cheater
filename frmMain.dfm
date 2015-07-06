@@ -47,7 +47,7 @@ object MainForm: TMainForm
     Top = 364
     Width = 528
     Height = 64
-    Caption = ' Polecenia '
+    Caption = ' Tools '
     TabOrder = 4
     Visible = False
     object Label3: TLabel
@@ -55,16 +55,14 @@ object MainForm: TMainForm
       Top = 16
       Width = 492
       Height = 13
-      Caption = 
-        'Lista wyraz'#243'w zawieraj'#261'cych wybrane litery zosta'#322'a pomy'#347'lnie wyg' +
-        'enerowana. Co chcesz z ni'#261' zrobi'#263'?'
+      Caption = 'List of all words matching given letters is ready. What now?'
     end
     object BitBtn1: TBitBtn
       Left = 11
       Top = 32
       Width = 122
       Height = 25
-      Caption = 'Zapisz do pliku'
+      Caption = 'Save to file'
       TabOrder = 0
       OnClick = BitBtn1Click
       Glyph.Data = {
@@ -82,7 +80,7 @@ object MainForm: TMainForm
       Top = 32
       Width = 122
       Height = 25
-      Caption = 'Kopiuj do Schowka'
+      Caption = 'Copy to clipboard'
       TabOrder = 1
       OnClick = BitBtn2Click
       Glyph.Data = {
@@ -100,7 +98,7 @@ object MainForm: TMainForm
       Top = 32
       Width = 122
       Height = 25
-      Caption = 'Przegl'#261'daj / Edytuj'
+      Caption = 'View or edit'
       TabOrder = 2
       OnClick = BitBtn3Click
       Glyph.Data = {
@@ -136,7 +134,7 @@ object MainForm: TMainForm
       Top = 32
       Width = 122
       Height = 25
-      Caption = 'Opr'#243#380'nij'
+      Caption = 'Empty'
       TabOrder = 3
       OnClick = BitBtn4Click
       Glyph.Data = {
@@ -163,8 +161,7 @@ object MainForm: TMainForm
       Top = 7
       Width = 80
       Height = 67
-      Hint = 'Generuj#Rozpoczyna wyszukiwanie wyraz'#243'w'
-      Caption = 'Generuj'
+      Caption = 'Generate'
       Flat = True
       Glyph.Data = {
         36080000424D3608000000000000360400002800000020000000200000000100
@@ -249,8 +246,7 @@ object MainForm: TMainForm
       Top = 7
       Width = 80
       Height = 67
-      Hint = 'O programie...#Wy'#347'wietla informacje o programie'
-      Caption = 'O programie...'
+      Caption = 'About...'
       Flat = True
       Glyph.Data = {
         36080000424D3608000000000000360400002800000020000000200000000100
@@ -329,8 +325,7 @@ object MainForm: TMainForm
       Top = 7
       Width = 80
       Height = 67
-      Hint = 'Koniec#Zako'#324'cza prac'#281' z programem'
-      Caption = 'Koniec'
+      Caption = 'Close'
       Flat = True
       Glyph.Data = {
         36080000424D3608000000000000360400002800000020000000200000000100
@@ -735,14 +730,14 @@ object MainForm: TMainForm
     Top = 84
     Width = 260
     Height = 40
-    Caption = ' J'#281'zyk '
+    Caption = ' Language '
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 16
       Width = 63
       Height = 13
-      Caption = 'Plik s'#322'ownika:'
+      Caption = 'Dictionary file:'
     end
     object cbLang: TComboBox
       Left = 80
@@ -760,7 +755,7 @@ object MainForm: TMainForm
       Top = 10
       Width = 60
       Height = 25
-      Caption = 'Edytuj'
+      Caption = 'Edit'
       Enabled = False
       TabOrder = 1
       OnClick = Button1Click
@@ -771,14 +766,14 @@ object MainForm: TMainForm
     Top = 84
     Width = 260
     Height = 40
-    Caption = ' Numeracja '
+    Caption = ' Numbering '
     TabOrder = 2
     object cb: TCheckBox
       Left = 8
       Top = 16
       Width = 233
       Height = 17
-      Caption = 'Numeruj kolejne pozycje w oknie wynikowym'
+      Caption = 'Add numbers to all matching words'
       TabOrder = 0
     end
   end
@@ -787,7 +782,7 @@ object MainForm: TMainForm
     Top = 128
     Width = 528
     Height = 168
-    Caption = ' Wybrane litery '
+    Caption = ' Selected letters '
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -800,14 +795,14 @@ object MainForm: TMainForm
       Top = 16
       Width = 286
       Height = 13
-      Caption = 'Zaznacz litery z jakich mog'#261' sk'#322'ada'#263' si'#281' wyszukane wyrazy:'
+      Caption = 'Pick letters, that may be included in matching words:'
     end
     object Label9: TLabel
       Left = 8
       Top = 144
       Width = 118
       Height = 13
-      Caption = 'Kryterium wyszukiwania:'
+      Caption = 'Search criteria:'
     end
     object cbLetters: TCheckListBox
       Left = 8
@@ -831,7 +826,7 @@ object MainForm: TMainForm
       Top = 40
       Width = 86
       Height = 25
-      Caption = 'Wszystko'
+      Caption = 'All'
       TabOrder = 1
       OnClick = BitBtn5Click
       Glyph.Data = {
@@ -849,7 +844,7 @@ object MainForm: TMainForm
       Top = 72
       Width = 86
       Height = 25
-      Caption = 'Nic'
+      Caption = 'Nothing'
       TabOrder = 2
       OnClick = BitBtn6Click
       Glyph.Data = {
@@ -870,7 +865,7 @@ object MainForm: TMainForm
       Top = 104
       Width = 86
       Height = 25
-      Caption = 'Odwr'#243#263
+      Caption = 'Revert'
       TabOrder = 3
       OnClick = BitBtn7Click
       Glyph.Data = {
@@ -892,11 +887,9 @@ object MainForm: TMainForm
       ItemHeight = 13
       TabOrder = 4
       Items.Strings = (
-        'Znajd'#378' wyrazy zawieraj'#261'ce wszystkie zaznaczone litery'
-        
-          'Znajd'#378' wyrazy zawieraj'#261'ce jedn'#261' lub wi'#281'cej spo'#347'r'#243'd zaznaczonych ' +
-          'liter'
-        'Znajd'#378' wyrazy zawieraj'#261'ce wy'#322#261'cznie zaznaczone litery')
+        'Find words containing ALL selected letters (and others too)'
+        'Find words containing ONE or MORE of selected letters (and others too)'
+        'Find words containing ONLY selected letters')
     end
   end
   object GroupBox5: TGroupBox
@@ -904,7 +897,7 @@ object MainForm: TMainForm
     Top = 304
     Width = 528
     Height = 57
-    Caption = ' Proces '
+    Caption = ' Process '
     TabOrder = 5
     Visible = False
     object Panel3: TPanel
@@ -919,14 +912,14 @@ object MainForm: TMainForm
         Top = 1
         Width = 238
         Height = 13
-        Caption = 'Trwa konwersja liter w s'#322'owniku. Prosz'#281' czeka'#263'...'
+        Caption = 'Converting letters in dictionary. Please, wait...'
       end
       object Label8: TLabel
         Left = 446
         Top = 2
         Width = 37
         Height = 13
-        Caption = 'Post'#281'p:'
+        Caption = 'Progress:'
       end
       object lProgress2: TLabel
         Left = 486
@@ -954,14 +947,14 @@ object MainForm: TMainForm
         Top = 2
         Width = 155
         Height = 13
-        Caption = 'Trwa przeszukiwanie s'#322'ownika...'
+        Caption = 'Searching dictionary...'
       end
       object Label5: TLabel
         Left = 232
         Top = 2
         Width = 136
         Height = 13
-        Caption = 'Liczba pasuj'#261'cych wyraz'#243'w:'
+        Caption = 'Number of matching words:'
       end
       object lWordFound: TLabel
         Left = 374
@@ -981,7 +974,7 @@ object MainForm: TMainForm
         Top = 2
         Width = 37
         Height = 13
-        Caption = 'Post'#281'p:'
+        Caption = 'Progress:'
       end
       object lProgress: TLabel
         Left = 486
@@ -1016,7 +1009,7 @@ object MainForm: TMainForm
         Top = 2
         Width = 150
         Height = 13
-        Caption = 'Liczba odnalezionych wyraz'#243'w:'
+        Caption = 'Number of matching words found:'
       end
       object lWordCount: TLabel
         Left = 154
@@ -1036,7 +1029,7 @@ object MainForm: TMainForm
         Top = 2
         Width = 107
         Height = 13
-        Caption = 'Czas trwania procesu:'
+        Caption = 'Time elapsed:'
       end
       object lTime: TLabel
         Left = 458
@@ -1072,8 +1065,8 @@ object MainForm: TMainForm
   end
   object SaveDialog1: TSaveDialog
     DefaultExt = '*.txt'
-    Filter = 'Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*'
-    Title = 'Zapisz jako...'
+    Filter = 'Text files (*.txt)|*.txt|All files (*.*)|*.*'
+    Title = 'Save as...'
     Left = 12
     Top = 4
   end
