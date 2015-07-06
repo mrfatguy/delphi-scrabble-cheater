@@ -1,4 +1,4 @@
-# Translation Giant
+# Scrabble Cheater
 
 This is a Scrabble cheater, a program, that is sometimes happily called "Scrbble Word Finder". It allows you to define set of letters and search for all words matching your set in three different modes, in Polish and English language. For using this program as standalone tool note, that dictionaries used in this program are very weak, their quality is low and that they haven't been updated for past twelve years (as of writing this). Therefore real usage of this program in high-rank Scrabble games may be impossible.
 
